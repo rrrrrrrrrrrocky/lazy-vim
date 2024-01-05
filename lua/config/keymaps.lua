@@ -1,4 +1,4 @@
--- Keymaps are automatically loaded on the VeryLazy event
+--  eymaps are automatically loaded on the VeryLazy event
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 local keymap = vim.keymap
@@ -53,3 +53,6 @@ keymap.set("n", "<C-w><down>", "<C-w>-")
 keymap.set("n", "<C-j>", function()
   vim.diagnostic.goto_next()
 end, opts)
+
+-- toggle relative number
+keymap.set("n", "<leader>rr", ":set rnu!<Return>", { silent = true, desc = "set rnu! (toggle relative number)" })
